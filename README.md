@@ -1,9 +1,20 @@
-# cchat: a fallback chat client for when the Claude Code CLI won't work
+# cchat
 
-cchat wraps `claude -p --output-format stream-json`. It gives you multi-turn chat with
-Markdown rendering and highlighted code diffs, and it shows file writes and command execution.
+Lightweight terminal chat for Claude, powered by your own API key or gateway.
 
-Requirements: macOS or Linux (uses `readline`; `setup.sh` expects brew or curl).
+Put your API key (or a gateway URL and token) in a config file, run `cchat`, and chat in your terminal:
+
+- Multi-turn sessions that you can resume later
+- Markdown rendering, plus highlighted diffs for every file edit
+- Shell commands and their output shown inline
+- Switch model, effort and permission mode on the fly
+- Local MCP servers, configured in the same file
+
+Under the hood, cchat is a single Python script on top of Claude Code's headless mode (`claude -p`).
+Claude can still read and edit files and run commands in your project, but you get a minimal chat UI
+and your credentials stay out of `~/.claude/settings.json`.
+
+Requirements: macOS or Linux, and Claude Code (`setup.sh` installs it for you).
 
 ## Quick start
 

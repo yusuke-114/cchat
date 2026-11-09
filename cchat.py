@@ -3,10 +3,9 @@
 # requires-python = ">=3.9"
 # dependencies = ["rich"]
 # ///
-"""cchat - a fallback chat client built on `claude -p`
+"""cchat - lightweight terminal chat for Claude, powered by your own API key or gateway
 
-When the interactive Claude Code CLI is unavailable, uses
-`claude -p --output-format stream-json` for multi-turn chat and renders
+Runs `claude -p --output-format stream-json` for multi-turn chat and renders
 Markdown, code diffs, file writes and command execution.
 """
 import argparse
@@ -329,7 +328,7 @@ class Chat:
 
 
 def main():
-    p = argparse.ArgumentParser(description="A fallback chat client built on claude -p")
+    p = argparse.ArgumentParser(description="Lightweight terminal chat for Claude, powered by your own API key or gateway")
     p.add_argument("-c", "--config",
                    help=f"config file path (default: {USER_CONFIG}, then the script directory)")
     p.add_argument("-m", "--model", help="model alias or full ID")
