@@ -15,7 +15,8 @@ flowchart LR
 ```
 
 - **One process per turn.** `--resume <session_id>` links the turns, so there's no long-lived process to hang or crash. Claude can still edit files and run commands.
-- **Credentials stay private.** The config becomes env vars for the child process only, plus a 0600 temp settings file. Nothing goes into argv or `~/.claude/settings.json`.
+- **Your global settings stay out.** `claude` runs with `--setting-sources project,local`, so `~/.claude/settings.json` is not read unless you opt in with `setting_sources`.
+- **Credentials stay private.** The config becomes env vars for the child process only, plus a 0600 temp settings file. Keys never appear in argv, and nothing is written to `~/.claude/settings.json`.
 - **No config from the current directory.** A cloned repo can't redirect your key to another gateway.
 
 ## Run
