@@ -40,7 +40,7 @@ cchat uses this JSON file instead of a `.env` file. Open it and fill in your val
       "model": "claude-opus-5-5"
     }
 
-- Calling the Anthropic API directly: delete `base_url` and `auth_token`, and set `"api_key": "sk-ant-..."`.
+- Calling the Anthropic API directly: delete `base_url` and `auth_token`, and set `"api_key": "your-api-key"`.
 - Going through a gateway or proxy: set `base_url` (without `/v1/messages`) and `auth_token`.
 - Fields you don't need can be deleted. See [Configuration](#configuration) for every field.
 
