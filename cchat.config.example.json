@@ -1,0 +1,16 @@
+{
+  "base_url": "https://your-gateway.example.com",
+  "auth_token": "your-api-key",
+  "model": "claude-opus-5-5",
+  "effort": "medium",
+  "permission_mode": "acceptEdits",
+  "allowed_tools": [
+    "Bash(git *)",
+    "Bash(ls *)"
+  ],
+  "setting_sources": "project,local",
+  "mcp_servers": {},
+  "env": {
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-sonnet-5-5"
+  }
+}

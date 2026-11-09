@@ -1,0 +1,5 @@
+# Local config with your key
+cchat.config.json
+
+__pycache__/
+.DS_Store
